@@ -60,12 +60,24 @@ Button buttonAnagram;
         }
 
     }
-    private boolean czyPalindrom2(String slowo){
-        int k=slowo.length()-1;
-        for(int i=0;i<(slowo.length()/2);i++){
-            if(slowo.charAt(i)==slowo.charAt(k)){
 
+    /**
+     * Nazwa czyPalindrom2
+     * Opis-Metoda sprawdza czy slowo bedace parametrem metody jest palindromem
+     * Parametry
+     * slowo-Zmienia typy string dla, ktroej bedzie sprawdzane czy slowo jest palindromem
+     * Zwracana wartosc-zwaraca wartosc logiczna true jesli slowo jest palindromem ifalse jesli nie jest
+     */
+    private boolean czyPalindrom2(String slowo){
+        int k=slowo.length();
+        for(int i=0;i<(slowo.length()/2);i++){
+            k--;
+            if(slowo.charAt(i)==slowo.charAt(k)){
+             continue;
+            }else{
+                return false;
             }
+
         }
         return true;
     }
